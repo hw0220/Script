@@ -1,7 +1,7 @@
 /**
-* @supported 90 AXXXC001
-*/
-var body = $response.body;
-body = '\/*\n@supported 9ED5DD2A6A0B B9CB74A80AEE\n*\/\n' + body;
+ * @supported 90AD4EC2DD99
+ */
 
-$done(body);
+let obj = JSON.parse($response.body)
+obj["example"] = 0;
+$done({body:JSON.stringify(obj)})
