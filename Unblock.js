@@ -1,6 +1,6 @@
 /**
  * @supported 90AD4EC2DD99
  */
-let obj = JSON.parse($response.body)
-obj["example"] = 0;
-$done({body:JSON.stringify(obj)})
+var body = $response.body;
+body = '\/*\n@supported 90AD4EC2DD99\n*\/\n' + body;
+$done(body);
