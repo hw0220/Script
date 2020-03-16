@@ -10,6 +10,8 @@
 
 * Store version QX1.0.4 (164) This version completely limits remote script resources, meaning that all scripts can only point to local paths.
 
+* Store version QX1.0.5 (192) Remote script resources are unavailable, but "task" script functionality is added.
+
 QX1.0.3 add device ID, a simple example:
 
 ```ini
@@ -51,7 +53,7 @@ The above random generated device ID can be found at the bottom of Quantumult X 
 
 * **[Js_local_WorkingCopy.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_local_WorkingCopy.conf) (Local script subscriptions that need to work with Working Copy apps, this subscription can solve the problem that remote subscription cannot be made above QX 1.0.4)**
 
-* **[Js_local_WorkingCopy_New.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_local_WorkingCopy_New.conf) (Local script subscriptions that need to work with Working Copy apps, This subscription is only available for QX 1.0.5(TF188) and above.)**
+* **[Js_local_WorkingCopy_Cookie.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_local_WorkingCopy_Cookie.conf) (This local subscription is used to resolve the cookie acquisition of QX task scripts, only available for QX 1.0.5 (188+) and above, you can disable it manually after use to avoid meaningless MITM.)**
 
 * **Note !!! Note !!! Note !!! Unlike the Surge rule, the Quantumult X rule does not include the [ConnersHua](https://github.com/ConnersHua/Profiles) ad rules, you can add it yourself.**
 
