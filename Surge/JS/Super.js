@@ -15,13 +15,28 @@ Detail: /cell/detail
 用户评论: /user/cell_coment
 用户feed: /user/cell_userfeed
 用户发帖: /user/publish_list
-===================================
+
+**************************
+QuantumultX:
+
+[rewrite_local]
+^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Super.js
+
+[mitm]
+hostname = *.snssdk.com
+
+**************************
+Surge4 or Loon:
+
 [Script]
-http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js
+http-response ^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Super.js
+
 [MITM]
 hostname = *.snssdk.com
-*/
-var body = $response.body.replace(/\":([0-9]{15,})/g, '":"$1str"');
+
+**************************/
+
+var body = $response.body.replace(/id\":([0-9]{15,})/g, 'id":"$1str"');
 body = JSON.parse(body);
 if (body.data.data) {
     obj = body.data.data;
@@ -74,7 +89,7 @@ if (obj instanceof Array) {
     }
 }
 body = JSON.stringify(body);
-body = body.replace(/\":\"([0-9]{15,})str\"/g, '":$1');
+body = body.replace(/id\":\"([0-9]{15,})str\"/g, 'id":$1');
 body = body.replace(/\"can_download\":false/g, '"can_download":true');
 body = body.replace(/tplv-ppx-logo.image/g, '0x0.gif');
 body = body.replace(/tplv-ppx-logo/g, '0x0');
