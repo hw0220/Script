@@ -1,24 +1,127 @@
-### Difference between Quantumult X versions :
+## TOC
+- [TOC](#toc)
+- [Script Overview](#script-overview)
+  - [Daily-Bonus Script](#daily-bonus-script)
+  - [Functionality-enhancing Script](#functionality-enhancing-script)
+  - [Other Script](#other-script)
+- [Surge File Overview](#surge-file-overview)
+- [QuantumultX File Overview](#quantumultx-file-overview)
+- [Loon File Overview](#loon-file-overview)
+- [Stash File Overview](#stash-file-overview)
+- [Disclaimer](#disclaimer)
+  - [Decrypt](#decrypt)
+  - [Privacy](#privacy)
+  - [Commercial](#commercial)
+  - [Infringement](#infringement)
+  - [Liability](#liability)
+  - [Change](#change)
+- [Acknowledgment](#acknowledgment)
+- [License](#license)
 
-* Store version QX1.0.0 (120) JS function is unlimited, but does not support v2, does not support AlwaysOn
 
-* Store version QX1.0.1 (130) restricts keywords for script VIP types, but supports v2 and supports AlwaysOn
+> **The scripts or rewrite rules described below may require enabling MITM. Additionally, the generated root certificate must be installed and trusted manually in the system.**
 
-* Store version QX1.0.2 (136) Relaxed certain keyword restrictions, but limited script remote references (script subscriptions), support for v2 and support for http and support AlwaysOn
+## Script Overview
 
-* Store version QX1.0.3 (155) Removed keyword restrictions and restored script remote references. However, the content in the remote script needs to be annotated with the device ID before it can be executed.
+### Daily-Bonus Script
 
-* Store version QX1.0.4 (164) This version completely limits remote script resources, meaning that all scripts can only point to local paths.
+|                       Application                       |                         Script name                          |   Available    | Maintenance |
+| :-----------------------------------------------------: | :----------------------------------------------------------: | :------------: | :---------: |
+|   [京东商城](https://apps.apple.com/app/id414245413)    | [JD_DailyBonus.js](https://github.com/NobyDa/Script/blob/master/JD-DailyBonus/JD_DailyBonus.js) |       ❌        |      ⚠️      |
+|   [百度贴吧](https://apps.apple.com/app/id477927812)    | [TieBa.js](https://github.com/NobyDa/Script/blob/master/BDTieBa-DailyBonus/TieBa.js) | ✅ (2023/08/17) |      ❌      |
+|           [吾爱破解](https://www.52pojie.cn/)           | [52pojie.js](https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js) |       ❌        |      ❌      |
+|   [爱奇艺](https://apps.apple.com/cn/app/id393765873)   | [iQIYI.js](https://github.com/NobyDa/Script/blob/master/iQIYI-DailyBonus/iQIYI.js) | ✅ (2023/08/17) |      ✅      |
+|   [快看漫画](https://apps.apple.com/app/id906936224)    | [KKMH.js](https://github.com/NobyDa/Script/blob/master/KuaiKan-DailyBonus/KKMH.js) | ✅ (2023/08/17) |      ✅      |
+| [哔哩哔哩漫画](https://apps.apple.com/app/id1426252715) | [Manga.js](https://github.com/NobyDa/Script/blob/master/Bilibili-DailyBonus/Manga.js) | ✅ (2023/08/17) |      ✅      |
+|          [巴哈姆特](https://www.gamer.com.tw/)          | [BahamutDailyBonus.js](https://github.com/NobyDa/Script/blob/master/Bahamut/BahamutDailyBonus.js) | ✅ (2023/08/17) |      ✅      |
 
-* Store version QX1.0.5 (192) Remote script resources are unavailable, but "task" script functionality is added.
+------
 
-* Store version QX1.0.6 (212) Supports rewrite of HTTP request body, and replay of HTTP request
+### Functionality-enhancing Script
 
-* Store version QX1.0.7 (240) Supports TLS 1.3 for TLS based proxy protocols, and new external proxy protocol trojan.
+| Script name                                                                                             | Description                                                                                                                                                                                                                        |
+|:-------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [PolicySwitch.js](https://github.com/NobyDa/Script/blob/master/Shortcuts/PolicySwitch.js)               | Switch [QX](https://apps.apple.com/app/id1443988620),[Surge](https://apps.apple.com/app/id1442620678),[Loon](https://apps.apple.com/app/id1373567447) policy groups using ios [shortcut](https://apps.apple.com/app/id1462947752). |
+| [DataQuery.js](https://github.com/NobyDa/Script/blob/master/Sub-store-parser/DataQuery.js)              | Server(VPN) traffic query based on [Sub-Store](https://github.com/Peng-YM/Sub-Store).                                                                                                                                              |
+| [Bili_Auto_Regions.js](https://github.com/NobyDa/Script/blob/master/Surge/JS/Bili_Auto_Regions.js)      | [Bilibili anime](https://apps.apple.com/cn/app/id736536022) auto switch region & show [douban](https://www.douban.com/) rating.                                                                                                    |
+| [ExchangePoints.js](https://github.com/NobyDa/Script/blob/master/Bilibili-DailyBonus/ExchangePoints.js) | [Bilibili Comics](https://apps.apple.com/app/id1426252715) points mall auto snap up.                                                                                                                                               |
+| [TestFlightAccount.js](https://github.com/NobyDa/Script/blob/master/TestFlight/TestFlightAccount.js)    | Merge and share [TestFlight](https://apps.apple.com/app/id899247664) accounts                                                                                                                                                      |
+| [Google_CAPTCHA.js](https://github.com/NobyDa/Script/blob/master/Surge/JS/Google_CAPTCHA.js)            | Google CAPTCHA solution(Surge only)                                                                                                                                                                                                |
 
-QX1.0.3 add device ID, a simple example:
+---
 
-```ini
+### Other Script
+
+|                         Application                          |                         Script name                          |       Description       |   Available    |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :---------------------: | :------------: |
+|    [HTTPBot](https://apps.apple.com/cn/app/id1232603544)     | [vsco.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js) |    Unlock membership    | ✅ (2023/08/17) |
+|        [VSCO](https://apps.apple.com/app/id588013838)        | [vsco.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js) |    Unlock membership    | ✅ (2023/08/17) |
+|     [1Blocker](https://apps.apple.com/app/id1365531024)      | [vsco.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js) |    Unlock membership    | ✅ (2023/08/17) |
+|       [JibJab](https://apps.apple.com/app/id875561136)       | [jibjab.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/jibjab.js) |    Unlock membership    | ✅ (2023/08/17) |
+| [美易Picsart](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js) | [PicsArt.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js) |    Unlock membership    | ✅ (2023/08/17) |
+|    [MIX滤镜大师](https://apps.apple.com/app/id913947918)     | [MIX.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/MIX.js) | Unlock in-app purchases | ✅ (2023/08/17) |
+|    [Polarr 泼辣](https://apps.apple.com/app/id988173374)     | [Polarr.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js) | Unlock in-app purchases | ✅ (2023/08/17) |
+|   [小影VivaVideo](https://apps.apple.com/app/id738897668)    | [vivavideo.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/vivavideo.js) |    Unlock membership    | ✅ (2023/08/17) |
+|     [CamScanner](https://apps.apple.com/app/id388627783)     | [CamScanner.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js) |  Unlock some benefits   | ✅ (2023/08/17) |
+|     [知音漫客](https://apps.apple.com/app/id1012491820)      | [Zymh.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Zymh.js) |   Unlock vip chapters   | ✅ (2023/08/17) |
+|               [香蕉视频](https://www.aa2.app)                | [xjsp.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js) |    Unlock membership    | ✅ (2023/08/17) |
+|   [网易蜗牛读书](https://apps.apple.com/app/id1127249355)    | [wnyd.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js) |    Unlock membership    | ✅ (2023/08/17) |
+|    [陆琪讲故事](https://apps.apple.com/app/id1435575842)     | [luqi.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/luqi.js) |      Unlock radio       | ✅ (2023/08/17) |
+|      [百度网盘](https://apps.apple.com/app/id547166701)      | [BaiduCloud.js](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js) |   Unlock video speed    | ✅ (2023/08/17) |
+|       [WeChat](https://apps.apple.com/app/id414478124)       | [Wechat.js](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js) |       Remove Ads        | ✅ (2023/08/17) |
+|     [動畫瘋](https://apps.apple.com/tw/app/id1102650114)     | [BahamutAnimeAds.js](https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js) |       Remove Ads        | ✅ (2023/08/17) |
+
+---
+
+## Surge File Overview
+
+|                          File name                           |                         Description                          | Type   |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | ------ |
+| [HuiJuDongManAds.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/HuiJuDongManAds.sgmodule) |  Remove [APP](https://apps.apple.com/app/id1451949669) Ads   | Module |
+| [IPA_install.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/IPA_install.sgmodule) |     Use Surge to assist in install IPA (signed version)      | Module |
+| [TestFlightDownload.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightDownload.sgmodule) | Remove [TestFlight](https://apps.apple.com/app/id899247664) region restrictions | Module |
+| [TestFlightAccount.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightAccount.sgmodule) | Merge and share [TestFlight](https://apps.apple.com/app/id899247664) accounts | Module |
+| [GetCookie.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/GetCookie.sgmodule) |                  Daily bonus script related                  | Module |
+| [BahamutAnimeAds.sgmodule](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/BahamutAnimeAds.sgmodule) | Remove [Bahamut anime](https://apps.apple.com/tw/app/id1102650114) Ads | Module |
+
+---
+
+## QuantumultX File Overview
+
+| File name                                                                                                             | Description                                                                     | Type              |
+|:---------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:-----------------:|
+| [Js.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf)                                 | Remote script subscription.                                                     | Rewrite Resources |
+| [Js_Remote_Cookie.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf)     | Daily bonus script related                                                      | Rewrite Resources |
+| [TestFlightDownload.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf) | Remove [TestFlight](https://apps.apple.com/app/id899247664) region restrictions | Rewrite Resources |
+| [IPA-Installer.snippet](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/IPA-Installer.snippe)      | Use QX to assist in install IPA (signed version)                                | Rewrite Resources |
+
+Rules of type "Rule" include only ad hosts. Please select the REJECT policy.
+
+<details><summary>Difference between QuantumultX versions (Click to view)</summary>
+
+* AppStore version QX1.0.0 (120): This is the initial version, and JS functionality is unrestricted.
+
+* AppStore version QX1.0.1 (130): This version adds support for V2Ray protocols but restricts certain keywords for VIP-type scripts.
+
+* AppStore version QX1.0.2 (136): This version adds support for HTTP protocols and relaxes certain script keyword restrictions but restricts remote script subscriptions.
+
+* AppStore version QX1.0.3 (155): This version removes keyword restrictions and restores the script remote subscription functionality. However, the device ID must be commented out in the remote script before execution.
+
+* AppStore version QX1.0.4 (164): This version completely restricts remote script subscriptions, requiring all scripts to use local paths.
+
+* AppStore version QX1.0.5 (192): This version introduces a scheduled script task feature.
+
+* AppStore version QX1.0.6 (212): This version supports modifying HTTP request body and replaying HTTP requests.
+
+* AppStore version QX1.0.7 (240): This version supports TLS 1.3 (TLS-based proxy protocol) and Trojan protocols.
+
+* ...
+
+* AppStore version QX1.0.10 (313): This version restores remote script subscriptions.
+
+In QX1.0.3, the device ID feature was added. Here’s a simple example:
+
+```javascript
 /**
  * @supported 23AD6B11CD4B
  */
@@ -27,65 +130,67 @@ let obj = JSON.parse($response.body)
 obj["example"] = 0;
 $done({body:JSON.stringify(obj)})
 ```
-The above random generated device ID can be found at the bottom of Quantumult X additional menu, and it may change after system restore.
+
+The randomly generated device ID above is located at the bottom of the Quantumult X additional menu and may change after a system restore.
+
+</details>
 
 ---
 
-## File related instructions：
+## Loon File Overview
 
-### Surge：
-
-* **[AdRule.list](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list) （More than 8000 ad rules， integrate [lhie1](https://github.com/lhie1/Rules) and [ConnersHua](https://github.com/ConnersHua/Profiles) and added some advertising rules)**
-
-* **[AdRuleTest.list](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRuleTest.list) （More than 1300 ad rules，This rule is modified from [Scomper](https://github.com/scomper/Surge). Because the original author stopped maintenance, so take over the optimization and delete some normal rules, only for testing**)
-
-* **[AdRuleRegex.list](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRuleRegex.list) （More than 700 ad rewrite rules, integrate [lhie1](https://github.com/lhie1/Rules)、[ConnersHua](https://github.com/ConnersHua/Profiles)、[onewayticket255](https://github.com/onewayticket255/Surge-Script) and [Choler](https://github.com/Choler/Surge/tree/master/Ruleset).  You need to manually add the hostname of the second line in the file to Surge config file. and open MITM and trust the certificate)**
-
-* **[Download.list](https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Download.list) (Integrate some BT, Thunder, download shunt rules)**
-
-* **Because [ConnersHua](https://github.com/ConnersHua/Profiles) ad rules are already included in this rule, you don't need to repeatedly add.**
-
-### Quantumult X：
-
-* **[AdRule.list](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRule.list) （More than 7000 ad rules, This rule is modified from [lhie1](https://github.com/lhie1/Rules)，and delete [ConnersHua](https://github.com/ConnersHua/Profiles) duplicate)**
-
-* **[AdRuleTest.list](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/AdRuleTest.list)（More than 1300 ad rules，This rule is modified from [Scomper](https://github.com/scomper/Surge). Because the original author stopped maintenance, so take over the optimization and delete some normal rules, only for testing**)
-
-* **[Rewrite_lhie1.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf)（More than 400 ad rewrite rules, integrate [lhie1](https://github.com/lhie1/Rules)、[onewayticket255](https://github.com/onewayticket255/Surge-Script)、[Choler](https://github.com/Choler/Surge/tree/master/Ruleset), and delete [ConnersHua](https://github.com/ConnersHua/Profiles) duplicate，you need to open MITM and trust the certificate)**
-
-* **[Js.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf) (Script subscription of Quantumult X TF version, the Store version is temporarily unavailable, this subscription is no longer compatible with QX1.0.0)**
-
-* **[Js_local_WorkingCopy.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_local_WorkingCopy.conf) (Local script subscriptions that need to work with Working Copy apps, this subscription can solve the problem that remote subscription cannot be made above QX 1.0.4)**
-
-* **[Js_local_WorkingCopy_Cookie.conf](https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_local_WorkingCopy_Cookie.conf) (This local subscription is used to resolve the cookie acquisition of QX task scripts, only available for QX 1.0.5 (188+) and above, you can disable it manually after use to avoid meaningless MITM.)**
-
-* **Note !!! Note !!! Note !!! Unlike the Surge rule, the Quantumult X rule does not include the [ConnersHua](https://github.com/ConnersHua/Profiles) ad rules, you can add it yourself.**
-
-### Rule remarks :
-
-* **Most of these are Chinese advertising rules. overseas users may not applicable**
-* **These rules only include ads. Please choose REJECT for the policy**
-* **Self-use only, Update depend on mood, if you have any questions, please submit a Issues or pull request.**
+|                          File name                           |                         Description                          |  Type  |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----: |
+| [Loon_GetCookie.plugin](https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_GetCookie.plugin) |                  Daily bonus script related                  | Plugin |
+| [Loon_TF_Download.plugin](https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Download.plugin) | Remove [TestFlight](https://apps.apple.com/app/id899247664) region restrictions | Plugin |
+| [Loon_TF_Account.plugin](https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin) | Merge and share [TestFlight](https://apps.apple.com/app/id899247664) accounts | Plugin |
+| [Loon_Bahamut_ADS.plugin](https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Bahamut_ADS.plugin) | Remove [Bahamut anime](https://apps.apple.com/tw/app/id1102650114) Ads | Plugin |
+| [Loon_IPA_Installer.plugin](https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_IPA_Installer.plugin) |      Use Loon to assist in install IPA (signed version)      | Plugin |
 
 ---
 
-## Disclaimer：
+## Stash File Overview
 
-* **Any unlocking and decryption analysis scripts involved in the Script project released by NobyDa are only used for resource sharing and learning research. Legality, accuracy, completeness, and validity cannot be guaranteed. Please judge according to the situation itself.**
+| File name                                                                                                         | Description                                         | Type     |
+|:-----------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------:|:--------:|
+| [IPA-Installer.stoverride](https://raw.githubusercontent.com/NobyDa/Script/master/Stash/IPA-Installer.stoverride) | Use Stash to assist in install IPA (signed version) | Override |
 
-* Any user who uses the script indirectly, Including but not limited to building a VPS or spreading if a certain behavior violates the country and laws or relevant regulations, **NobyDa is not responsible for any privacy leak or other consequences caused by it.**
+---
 
-* **Do not use any content of the Script project for commercial or illegal purposes，otherwise, all consequences are at your own risk.**
+## Disclaimer
 
-* If any unit or individual believes that a script of the project may be suspected of infringing its rights, it shall promptly notify and **provide proof of identity, proof of ownership,** we will delete the relevant script after receiving the certification file.
+Please note that in the following disclaimer, the term "Script-project"  specifically refers to the open source scripts and rules available at "https://github.com/NobyDa/Script", while the term "NobyDa" specifically refers to the author and owner of these scripts and rules.
 
-* **NobyDa is not responsible for any scripting issues, including but not limited to any loss or damage caused by any script error.**
+### Decrypt
 
-* You must completely remove the above from your computer or mobile phone within **24 hours** of downloading.
+- Any scripts within the Script-project that involve unlocking and decrypting are intended for resource sharing and study purposes only. The  legality, accuracy, completeness, and validity of these scripts cannot  be guaranteed. **Therefore, please use your own judgment based on the  actual situation.**
 
-* Anyone who views this project in any way or any script that uses the Script project directly or indirectly should read this statement carefully. And NobyDa reserves the right to change or supplement this disclaimer at any time. **Once you use and reproduce any related scripts or rules of the Script project, you are deemed to have accepted this disclaimer.**
+- You are required to delete the decryption scripts from your computer or phone completely within **24 hours** of downloading them.
 
-### Special thanks：
+### Privacy
+
+- NobyDa is not responsible for any privacy breaches or other consequences arising from the direct or indirect use of any of the scripts in the Script-project, including but not limited to violating relevant laws  and regulations or establishing a VPS for distribution purposes.
+
+### Commercial
+
+- Do not use any scripts from the Script-project for commercial or  illegal purposes, **or you will bear full responsibility for the  consequences that may arise**.
+
+### Infringement
+
+- If any company or individual believes that any script in the Script-project may infringe on their rights, they should promptly notify us  and provide proof of **ownership** and **identity**. We will delete the relevant scripts upon receipt of the necessary documents.
+
+### Liability
+
+- NobyDa is not responsible for any problems with the Script-project, **including but not limited to any loss or damage caused by any scripting errors.**
+
+### Change
+
+- Anyone who views or uses the scripts in the Script-project, whether  directly or indirectly, should carefully read this disclaimer. NobyDa  reserves the right to change or supplement this disclaimer at any time.
+
+- **By viewing, using, or copying any of the related scripts in the Script-project, you will be deemed to have accepted this disclaimer.**
+
+## Acknowledgment
+
 * [@sazs34](https://github.com/sazs34)
 * [@lhie1](https://github.com/lhie1)
 * [@Scomper](https://github.com/scomper)
@@ -93,3 +198,6 @@ The above random generated device ID can be found at the bottom of Quantumult X 
 * [@Choler](https://github.com/Choler)
 * [@ConnersHua](https://github.com/ConnersHua)
 
+## License
+
+[GPLv3](LICENSE)
